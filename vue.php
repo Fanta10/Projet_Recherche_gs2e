@@ -22,13 +22,6 @@
 		$datas = $_POST['search'];
 		$result = $bdd->query("SELECT P.designation, P.image, P.date_expiration, C.libelle FROM produits  AS P INNER JOIN categories AS C ON P.id_categories = C.id_categories WHERE P.designation LIKE '%$datas%' ");
 		
-		 	// if ($result->num_rows > 0) {
-			// 	while($row = $result->fetch_assoc()) {
-			// 		echo "Designation: " . $row["designation"]. "<br>";
-			// 	}
-			// } else {
-			// 	echo "Aucun résultat trouvé.";
-			// }
 		
 			while ($reponse = $result->fetch()){
 		 		?>
